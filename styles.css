@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;  /*fazer com que height e widht inclua borda e padding*/
+  }
+
+body {
+    background-color: #151515;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: #205295;
+    font-size: 4rem;
+    text-align: center;
+}
+
+form {
+    width: 50%;
+    max-width: 100%;
+}
+
+.input {
+    border: 1px solid #205295;
+    color: #F5F5F5;
+    background-color: #151515;
+    box-shadow:  0 0 10px #205295;
+    transition: box-shadow 0.3s ease-in-out;
+    font-size: 1rem;
+    width: 100%;
+    display: block;
+    padding: 10px;
+}
+
+.input:hover { /*shadow após passar o mouse*/
+    box-shadow:  0 0 20px #205295;
+}
+
+.input:focus {
+    outline-color: #205295;
+}
+
+.input::placeholder {
+    color: #c9c9c9;
+}
+
+.todos {
+    color: #cccccc;
+    background-color: #252525;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todos li {
+    border: 1px solid #2C74B3;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 5px;
+}
+
+.todos li.completed {
+    color: #b6b6b6;
+    text-decoration: line-through;
+    opacity: 0.4;
+}
+
+small {
+    color: #cccccc;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+@media (min-width: 319px) and (max-width: 480px) { /*Mobile*/
+    form {
+        width: 80%;
+    }
+
+    h1 {
+        color: #205295;
+        font-size: 3.5rem;
+        text-align: center;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1200px) { /*iPads ou tablets*/
+    form {
+        width: 70%;
+    }
+}
